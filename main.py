@@ -19,10 +19,22 @@ class Bird():
         print(f'{self.colour} окрас')
 
 class Pigeon(Bird):
-    pass
+    def __init__(self, name, voice, colour, favourite_food):
+        super().__init__(name, voice, colour)
+        self.favourite_food = favourite_food
 
-bird1 = Pigeon('Гоша', 'курлык', 'серый')
+    def sing(self):
+        print(f'{self.name} курлык')
+
+    def walk(self):
+        print(f'{self.name} гуляет')
+
+
+bird1 = Pigeon('Гоша', 'курлык', 'серый', 'хлебные крошки')
+bird2 = Bird('Маша', 'чирик', 'коричневый')
 
 bird1.sing()
 bird1.info()
+bird1.walk()
 
+bird2.info()
